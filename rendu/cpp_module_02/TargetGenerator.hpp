@@ -2,6 +2,8 @@
 # define TARGETGENERATOR_HPP
 
 # include <vector>
+# include <string>
+# include <iostream>
 
 class ATarget;
 
@@ -16,8 +18,8 @@ class TargetGenerator
 		TargetGenerator();
 		~TargetGenerator();
 
-		void	learnTarget(ATarget*);
-		void	forgetTarget(const std::string&);
+		void	learnTargetType(ATarget*);
+		void	forgetTargetType(const std::string&);
 		ATarget*	createTarget(const std::string&);
 };
 

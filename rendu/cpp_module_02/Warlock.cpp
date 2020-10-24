@@ -53,5 +53,8 @@ Warlock::launchSpell(std::string name, const ATarget& ref)
 
 	elem = _book.createSpell(name);
 	if (elem != NULL)
+	{
 		(*elem).launch(ref);
+		delete elem;
+	}
 }

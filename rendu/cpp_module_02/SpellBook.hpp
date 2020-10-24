@@ -2,6 +2,8 @@
 # define SPELLBOOK_HPP
 
 # include <vector>
+# include <string>
+# include <iostream>
 
 class ASpell;
 

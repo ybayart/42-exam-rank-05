@@ -14,7 +14,7 @@ TargetGenerator::~TargetGenerator()
 }
 
 void
-TargetGenerator::learnTarget(ATarget* spell)
+TargetGenerator::learnTargetType(ATarget* spell)
 {
 	for (std::vector<ATarget*>::iterator it = _list.begin();it != _list.end();it++)
 		if ((*(*it)).getType() == (*spell).getType())
@@ -23,7 +23,7 @@ TargetGenerator::learnTarget(ATarget* spell)
 }
 
 void
-TargetGenerator::forgetTarget(const std::string& name)
+TargetGenerator::forgetTargetType(const std::string& name)
 {
 	for (std::vector<ATarget*>::iterator it = _list.begin();it != _list.end();)
 	{
@@ -40,7 +40,7 @@ TargetGenerator::forgetTarget(const std::string& name)
 ATarget*
 TargetGenerator::createTarget(const std::string& name)
 {
-	for (std::vector<ATarget*>::iterator it = _list.begin();it != _list.end();)
+	for (std::vector<ATarget*>::iterator it = _list.begin();it != _list.end();it++)
 	{
 		if ((*(*it)).getType() == name)
 		{

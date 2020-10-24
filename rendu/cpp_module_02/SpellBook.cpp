@@ -40,7 +40,7 @@ SpellBook::forgetSpell(const std::string& name)
 ASpell*
 SpellBook::createSpell(const std::string& name)
 {
-	for (std::vector<ASpell*>::iterator it = _list.begin();it != _list.end();)
+	for (std::vector<ASpell*>::iterator it = _list.begin();it != _list.end();it++)
 	{
 		if ((*(*it)).getName() == name)
 		{
